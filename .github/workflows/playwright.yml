@@ -29,6 +29,9 @@ jobs:
         run: npm install --save-dev cross-env
 
       - name: Run Playwright tests
+        env:
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: npm run test
 
       - name: Upload Playwright report
