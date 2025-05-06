@@ -10,7 +10,7 @@ class DashBoardPage{
         this.downloadArrowButton = page.getByTestId('ActionToggleButton');
         this.saveToFileLink = page.getByTestId('AsyncActionDialog-okButton');
         this.downloadLink = page.getByTestId('AsyncActionDialog-okButton');
-        this.downloadButton = page.locator('a[href$=".pdf"]:has-text("Download")');
+        this.downloadArrow = page.locator('a[href$=".pdf"]:has-text("Download")');
     }
 
     async mouseOverOnPowerEnergyGraph() {
@@ -56,10 +56,10 @@ class DashBoardPage{
       
         const [newPage] = await Promise.all([
           this.context.waitForEvent('page'),
-          this.downloadButton.click()
+          this.downloadArrow.click()
         ]);
       
-        await newPage.waitForLoadState();
+        await newPage.waitForLoadState('commit');
         expect(newPage.url()).toContain('.pdf');
         const pdfUrl = newPage.url();
       

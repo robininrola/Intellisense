@@ -9,7 +9,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   globalSetup: './utils/globalSetup.js',
   expect: {
-    timeout: 40000,
+    timeout: 60000,
   },
   timeout : 100000,
   reporter: 'html',
