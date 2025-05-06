@@ -29,7 +29,7 @@ jobs:
         run: npm install --save-dev cross-env
 
       - name: Run Playwright tests
-        run: npm run test:headed
+        run: npm run test
 
       - name: Upload Playwright report
         if: always()
