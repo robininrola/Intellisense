@@ -1,0 +1,19 @@
+{
+  "name": "intellisense-test",
+  "version": "1.0.0",
+  "description": "Playwright automation framework for Intellisense signin",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env ENV=qa playwright test",
+    "test:headed": "cross-env ENV=qa playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5"
+  }
+}
