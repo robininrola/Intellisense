@@ -4,8 +4,10 @@
   "description": "Playwright automation framework for Intellisense signin",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env ENV=qa playwright test",
-    "test:headed": "cross-env ENV=qa playwright test --headed",
+    "test": "cross-env ENV=qa playwright test --project=chromium",
+    "test:headed:chrome": "cross-env ENV=qa playwright test --headed --project=chromium",
+    "test:headed:edge": "cross-env ENV=qa playwright test --headed --project=edge",
+    "test:headed:firefox": "cross-env ENV=qa playwright test --headed --project=firefox",
     "report": "playwright show-report"
   },
   "keywords": [],
