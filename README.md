@@ -78,7 +78,8 @@ intellisense-test/
 
 - Run all tests:
   ```bash
-  npx playwright test
+  npm run test:headed:chrome ( with head )
+  npm run test ( headless )
   ```
 - Run a specific test file:
   ```bash
