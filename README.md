@@ -1,5 +1,6 @@
 # Intellisense Test Automation
 **COMMAND TO RUN ON LOCAL : npm run test:headed:chrome**
+
 This project is an automated test suite for the Intellisense web application, built with [Playwright](https://playwright.dev/) and the Page Object Model (POM) design pattern. It features secure credential handling, test data management, and continuous integration with GitHub Actions.
 
 ---
